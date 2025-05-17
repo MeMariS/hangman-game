@@ -2,10 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 @layer base {
   @font-face {
     font-family: "AkzidenzGroteskPro";
