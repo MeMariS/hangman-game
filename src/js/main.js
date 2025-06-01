@@ -1,18 +1,8 @@
 import "../css/style.css";
+import { darkModeHandle } from "./utils";
+import { startGame } from "./game";
 
-const darkModeSwitcher = document.getElementById("toggleDarkMode");
-const htmlElement = document.documentElement;
+darkModeHandle();
 
-if (localStorage.getItem("mode") === "dark") {
-  htmlElement.classList.add("dark");
-  darkModeSwitcher.checked = true;
-}
-
-darkModeSwitcher.addEventListener("input", () => {
-  htmlElement.classList.toggle("dark");
-  if (htmlElement.classList.contains("dark")) {
-    localStorage.setItem("mode", "dark");
-  } else {
-    localStorage.setItem("mode", "light");
-  }
-});
+const startGameButton = document.getElementById("startGame");
+startGameButton.addEventListener("click", startGame);
