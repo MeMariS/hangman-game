@@ -57,14 +57,14 @@ const checkLetter = (letter) => {
     wordArray.forEach((currentLetter, i) => {
       if (currentLetter === inputLetter) {
         winCount += 1;
-        if (winCount === word.length) {
-          stopGame("win");
-          return;
-        }
         document.getElementById(`letter_${i}`).innerText =
           inputLetter.toUpperCase();
       }
     });
+    if (winCount === word.length) {
+      stopGame("win");
+      return;
+    }
   }
 
   const hangmanImg = document.getElementById("hangman-img");
